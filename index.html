@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatLoads - Transforming Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d7f5e8;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: #01cdaa;
+            color: white;
+        }
+        .logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.8)) contrast(1.6) brightness(1.2) saturate(1.1);
+}
+
+.logo img:hover {
+    transform: scale(1.2); /* Makes the logo pop */
+    filter: drop-shadow(0px 0px 40px rgba(0, 255, 255, 0.8)) contrast(1.8) brightness(1.3);
+}
+
+      
+
+        
+        
+      
+  
+     .cta-buttonn {
+    display: inline-block;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cta-buttonn img {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+}
+
+      .cta-buttonn img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 25px rgba(0, 255, 255, 0.8)) contrast(1.5) brightness(1.2);
+}
+
+      .cta-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex; /* Use flex to align image properly */
+    align-items: center; /* Center image vertically */
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+.google-play-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+}
+
+
+        .hero {
+            text-align: center;
+            padding: 60px 10%;
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .hero:hover {
+            border-radius: 30px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .hero img {
+            border-radius: 30px;
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+          padding: 20px;
+        }
+        .mission {
+    text-align: center;  /* Centers the text */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically (if needed) */
+    width: 80%;
+    padding: 20px 0; /* Adjust spacing as needed */
+}
+       
+        .testimonials {
+            text-align: center;
+            padding: 50px 10%;
+            background-color: white;
+        }
+        .testimonial-item {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+        .testimonial-item:hover {
+            background: linear-gradient(145deg, #3bd1c5, #8596f2);
+        }
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .download {
+            text-align: center;
+            padding: 50px 10%;
+            background-color: #ffcc80;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 10%;
+            background-color: #e3f2fd;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+          .social-media {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+    .social-icons a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .social-icons img:hover {
+        transform: scale(1.2);
+    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004c8c;
+            color: white;
+        }
+
+      .mission{
+        border-radius:20px;
+      }
+      .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+      .features {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #f1f1f1;
+    gap: 20px; /* Space between cards */
+}
+
+.feature-item {
+    width: 80%; /* Make them larger and uniform */
+    max-width: 600px; /* Limit maximum size for better appearance */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: rgba(230, 230, 230, 1);
+        color: #F5F5F5;
+    transition: background 0.3s ease-in-out;
+  margin: 20px;
+}
+
+.feature-item:hover {
+    background: linear-gradient(145deg, #3bd1c5, #8596f2);
+}
+
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+      @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+      .floating-app {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ff6600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.floating-app img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+      @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-app:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+
+
+ .about, .vision, .mission {
+    display: flex;
+    justify-content: center;
+    padding: 50px 10%;
+    background-color: #f8f9fa;
+   border-radius: 20px;  /* ✅ Always apply border-radius */
+    overflow: hidden;
+}
+
+      .about, .vision, .mission:hover{
+        border-radius:20px;
+      }
+.info-card {
+    text-align: center;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.info-card:hover {
+   background: linear-gradient(135deg, #ff6600, #3bd1c5);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-card img {
+    border-radius:20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.more-text {
+    display: none;
+}
+
+.read-more-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff6600;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+
+ .more-text {
+            display: none;  /* Hidden by default */
+        }
+        .read-more-btn {
+            background-color: transparent;
+            border: none;
+            color: #ff6600;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .read-more-btn:hover {
+            text-decoration: underline;
+        }
+
+body {
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Dots Background */
+.features::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 25px 25px;
+    z-index: -1;
+}
+
+/* Flip Card Container */
+.feature-item {
+    width: 30%;
+    perspective: 1000px;
+}
+
+.feature-inner {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Neon Glow Effect (Always Visible) */
+.feature-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(255, 102, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+/* Pulsating Animation */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 102, 0, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); }
+}
+
+.feature-item:hover::before {
+    animation: pulseGlow 1.5s infinite;
+}
+
+/* Flip Effect */
+.feature-item:hover .feature-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Cards */
+.feature-front, .feature-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* Glassmorphism (Front Side) */
+.feature-front {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Neon Glow (Back Side) */
+.feature-back {
+    background: linear-gradient(135deg, #ff6600, #3bd1c5);
+    transform: rotateY(180deg);
+}
+
+/* Gradient Shine on Title */
+.feature-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ background: linear-gradient(45deg, #1e3c72, #2a5298);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Glow Effect */
+.feature-description {
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Icon */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+    </style>
+</head>
+<body>
+
+  <div class="animate">
+  
+    <header>
+        <div class="logo" >
+            <img src="https://bharatloads.com/img/logo.png" alt="BharatLoads Logo">
+        </div>
+      
+   <a href="https://play.google.com/store" target="_blank" class="cta-buttonn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+         alt="Get it on Google Play" 
+         class="google-play-logo">
+</a>
+
+
+    </header>
+<section class="hero reveal">
+    <section class="hero">
+        <h1>Revolutionizing Logistics with BharatLoads</h1>
+        <p>Connecting transporters and truck owners with cutting-edge technology.</p>
+        <img src=https://bharatloads.com/img/deskt1.png alt="BharatLoads App Preview">
+        <a href="#download" class="cta-button">Get the App</a>
+    </section>
+  
+<br><br>
+    
+  <section class="mission ">
+        <h2>Our Mission</h2>
+        <p>BharatLoads aims to make logistics seamless, efficient, and transparent for everyone in the transportation industry.</p>
+    </section>
+  
+<br><br>
+  <section class="features">
+    <div class="feature-item">
+        <div class="feature-inner">
+            <div class="feature-front">
+                <img src="https://cdn-icons-png.flaticon.com/512/3898/3898084.png" class="feature-icon" alt="Smart Load Matching">
+                <h3 class="feature-title">Smart Load Matching</h3>
+                <p class="feature-description">Real-time connection with available trucks.</p>
+            </div>
+            <div class="feature-back">
+                <p>🚀 Our AI-powered system ensures maximum efficiency in truck allocation, reducing empty miles and increasing earnings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item">
+        <div class="feature-inner">
+            <div class="feature-front">
+                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103611.png" class="feature-icon" alt="Real-Time Updates">
+                <h3 class="feature-title">Real-Time Updates</h3>
+                <p class="feature-description">Stay updated with market trends.</p>
+            </div>
+            <div class="feature-back">
+                <p>📡 Live tracking of shipments and instant alerts help logistics companies make better decisions faster.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item">
+        <div class="feature-inner">
+            <div class="feature-front">
+                <img src="https://cdn-icons-png.flaticon.com/512/2164/2164883.png" class="feature-icon" alt="Transparent Pricing">
+                <h3 class="feature-title">Transparent Pricing</h3>
+                <p class="feature-description">Fair and clear price calculations.</p>
+            </div>
+            <div class="feature-back">
+                <p>💰 No hidden fees! Users get real-time price breakdowns based on demand, location, and vehicle type.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <br><br>
+
+<section class="mission reveal">
+    <div class="info-card">
+        <h2>About BharatLoads</h2>
+        <img src="https://images.pexels.com/photos/122164/pexels-photo-122164.jpeg" alt="Logistics Overview">
+        <p>At BharatLoads, we are transforming India’s logistics by 
+          connecting transporters and truck owners through an innovative,
+         
+          <span class="dots">...</span>
+    <span class="more-text">  map-based load-truck matching platform. Our mission is to enhance
+          efficiency, transparency, and profitability in the logistics industry 
+          by using technology to streamline operations. Our platform is designed
+          to help businesses stay competitive in the fast-evolving transport
+          industry, saving time and maximizing opportunities for both sides.</span>
+        <button class="read-more-btn">Read More</button>
+        </p>
+    </div>
+</section>
+
+   
+
+
+<br><br>
+<section class="mission reveal">
+    <div class="info-card">
+        <h2>Our Mission</h2>
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Mission in Action">
+        <p >>We are redefining transportation by providing an
+      intuitive platform that connects truck owners and transporters
+     
+          <span class="dots">...</span>
+    <span class="more-text"> more efficiently. By combining advanced technology with trust and
+      transparency, we aim to reshape the logistics ecosystem, making 
+      transportation faster, more reliable, and profitable.</span>
+        <button class="read-more-btn">Read More</button>
+        </p>
+    </div>
+</section>
+
+   <br><br>
+  
+
+  
+<section class="mission reveal">
+    <div class="info-card">
+        <h2>Our Vision</h2>
+        <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="Future Vision">
+        <p>We envision a future where technology connects transporters
+          and truck owners seamlessly. We strive to create a platform 
+          
+           <span class="dots">...</span>
+    <span class="more-text">that empowers both parties, driving collaboration, innovation,
+          and growth. Through our commitment to excellence, we aim to build 
+          a more sustainable and efficient logistics industry.</span>
+        <button class="read-more-btn">Read More</button>
+        </p>
+      
+    </div>
+</section>
+
+
+ 
+  
+
+
+
+
+
+
+<br><br>
+
+
+  <section class="testimonials reveal">
+    <h2>What Our Users Say</h2>
+    
+    <div class="testimonial-item reveal">
+        <img src="https://www.svgrepo.com/show/311063/person.svg" alt="User 1">
+        <h3>Ramesh Kumar</h3>
+        <p>"BharatLoads has transformed how I find loads for my truck. Super easy and efficient!"</p>
+    </div>
+
+    <div class="testimonial-item reveal">
+        <img src="https://www.svgrepo.com/show/311063/person.svg" alt="User 2">
+        <h3>Priya Sharma</h3>
+        <p>"Real-time updates have made my logistics business smoother. Highly recommend it!"</p>
+    </div>
+
+    <div class="testimonial-item reveal">
+        <img src="https://www.svgrepo.com/show/311063/person.svg" alt="User 3">
+        <h3>Amit Verma</h3>
+        <p>"The transparency in pricing and availability is a game-changer. Love using BharatLoads!"</p>
+    </div>
+</section>
+  
+</section>
+
+    <br><br>
+
+    <section class="contact reveal">
+        <h2>Contact Us</h2>
+        <p>Phone: +91 9876543210</p>
+        <p>Email: support@bharatloads.com</p>
+        <p>Address: 123, Transport Nagar, Delhi, India</p>
+    </section>
+    <section class="social-media">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
+        <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 BharatLoads. All Rights Reserved.</p>
+    </footer>
+    </div>
+  <div class="floating-app">
+    <img src="https://bharatloads.com/img/logo.png" alt="App Logo">
+    <a href="#download" class="cta-button">Get the App</a>
+</div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    function revealOnScroll() {
+        document.querySelectorAll(".reveal").forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < window.innerHeight - 50) {
+                element.classList.add("active");
+            } else {
+                element.classList.remove("active");
+            }
+        });
+    }
+
+    function toggleFloatingButton() {
+        const missionSection = document.querySelector(".mission");
+        const floatingButton = document.querySelector(".floating-app");
+
+        if (missionSection.getBoundingClientRect().top <= 0) {
+            floatingButton.style.display = "flex";
+        } else {
+            floatingButton.style.display = "none";
+        }
+    }
+
+    function handleScroll() {
+        revealOnScroll();
+        toggleFloatingButton();
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run initially to check state on page load
+});
+    
+  document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const moreText = this.previousElementSibling;
+        if (moreText.style.display === "none" || moreText.style.display === "") {
+            moreText.style.display = "block";
+            this.textContent = "Read Less";
+        } else {
+            moreText.style.display = "none";
+            this.textContent = "Read More";
+        }
+    });
+});
+
+
+</script>
+
+
+</body>
+  
+</html>
